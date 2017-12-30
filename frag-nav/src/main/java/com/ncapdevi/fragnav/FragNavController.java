@@ -426,7 +426,7 @@ public class FragNavController {
 
             mCurrentFrag = fragment;
             if (mTransactionListener != null) {
-                mTransactionListener.onFragmentTransaction(getCurrentFrag(), TransactionType.POP);
+                mTransactionListener.onFragmentTransaction(getCurrentFrag(), TransactionType.CLEAR_STACK);
             }
         }
     }
@@ -955,7 +955,8 @@ public class FragNavController {
     public enum TransactionType {
         PUSH,
         POP,
-        REPLACE
+        REPLACE,
+        CLEAR_STACK
     }
 
     //Declare the TabIndex annotation
